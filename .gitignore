@@ -3,6 +3,8 @@
 
 # But not these files...
 !.gitignore
-!./build/
+!build/conf
+!docs
+!sources
 !README.md
 
