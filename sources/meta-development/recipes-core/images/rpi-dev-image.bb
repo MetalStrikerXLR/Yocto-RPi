@@ -1,11 +1,6 @@
 # Base this image on core-image-minimal
 include recipes-core/images/core-image-minimal.bb
 
-# Include modules in rootfs
-IMAGE_INSTALL += " \
-	kernel-modules \
-	"
-
 SPLASH = "psplash-raspberrypi"
 
 IMAGE_FEATURES += "ssh-server-dropbear splash"
@@ -63,11 +58,16 @@ PKGS_MENDER = " \
 # mender-image
 # mender-systemd
 
-
+# Include modules in rootfs
 IMAGE_INSTALL += "\
+ kernel-modules \
+ linux-firmware-rpidistro-bcm43430 \
  systemd \
+ usbutils \
  ${PKGS_BLUEALSAORG} \
 "
+
+#linux-firmware-rpidistro-bcm43430
 
 do_image_prepend() {
     bb.warn("The image 'rpi-dev-image' is a development image used for testing purposes!")
