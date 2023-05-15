@@ -1,3 +1,7 @@
-build/*
-!build/conf/
+build
+docs
 *__pycache__*
+sources/poky/.gitignore
+sources/meta-raspberrypi/.gitignore
+sources/meta-raspberrypi/.github
+sources/meta-openembedded/.gitignore
