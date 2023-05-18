@@ -19,7 +19,7 @@ This is a personal project where I will be experimenting with Yocto for Raspberr
 	>   bitbake-layers add-layer ../sources/meta-openembedded/meta-multimedia   
 	>   bitbake-layers add-layer ../sources/meta-development    
 	
-- Define machine configurations:
+- Define machine configurations in build/local.conf:
 	>   MACHINE ??= "raspberrypi3"  
 	>   ENABLE_UART = "1"   
 	>       
