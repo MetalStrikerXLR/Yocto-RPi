@@ -1,5 +1,5 @@
-# Base this image on core-image-minimal
-include recipes-core/images/core-image-minimal.bb
+# Base this image on core-image-base
+include recipes-core/images/core-image-base.bb
 
 SPLASH = "psplash-raspberrypi"
 
@@ -64,6 +64,8 @@ IMAGE_INSTALL += "\
  linux-firmware-rpidistro-bcm43430 \
  systemd \
  usbutils \
+ hostapd \
+ wpa-supplicant \
  ${PKGS_BLUEALSAORG} \
 "
 
