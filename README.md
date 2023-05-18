@@ -1,13 +1,46 @@
 This is a personel project where I will be learning and experimenting with Yocto from scratch.
 
+Yocto Version: 2.7 (warrior)
+Distribution: poky
+Host System: Ubuntu 20.04
+Target System: Raspberry Pi 3B+/4B
+
 # Getting started
 
-Source poky environemnt:
+- Clone the repository
+- In repository root, source poky build environemnt:
 
-`source sources/poky/oe-init-build-env`
+    source sources/poky/oe-init-build-env   
 
-Follow any yocto tutorial to add layers and define machine configurations.
-A reference can be found in the build/conf folder of this repository
+- Add required layers:
+
+    bitbake-layers add-layer ../sources/meta-raspberrypi    
+    bitbake-layers add-layer ../sources/meta-openembedded/meta-oe   
+    bitbake-layers add-layer ../sources/meta-openembedded/meta-python   
+    bitbake-layers add-layer ../sources/meta-openembedded/meta-networking   
+    bitbake-layers add-layer ../sources/meta-openembedded/meta-multimedia   
+    bitbake-layers add-layer ../sources/meta-development    
+
+- Define machine configurations:
+
+    MACHINE ??= "raspberrypi3"   
+    ENABLE_UART = "1"   
+
+    DISTRO_FEATURES += "systemd bluetooth wifi" 
+    DISTRO_FEATURES_remove = "pulseaudio sysvinit"  
+
+    VIRTUAL-RUNTIME_init_manager = "systemd"    
+    VIRTUAL-RUNTIME_initscripts = ""    
+
+    PREFERRED_VERSION_alsa-lib = "1.1.8"    
+    PREFERRED_VERSION_alsa-utils = "1.1.8"  
+    PREFERRED_VERSION_alsa-plugins = "1.1.8"    
+    PREFERRED_VERSION_sbc = "2.%"   
+
+    RM_OLD_IMAGE = "1"  
+    IMAGE_FSTYPES = "rpi-sdimg" 
+
+Note: Set MACHINE to "raspberrypi4" for Raspberry Pi 4
 
 # Helpful Yocto Commands:
  
