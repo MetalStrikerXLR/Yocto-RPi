@@ -1,7 +1,6 @@
 build
 docs
 sources/poky/.gitignore
-sources/poky/bitbake/lib
 sources/meta-raspberrypi/.gitignore
 sources/meta-raspberrypi/.github
 sources/meta-openembedded/.gitignore
