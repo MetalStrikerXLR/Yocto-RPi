@@ -6,41 +6,13 @@ This is a personal project where I will be experimenting with Yocto for Raspberr
 - **Host System:** Ubuntu 20.04
 - **Target System:** Raspberry Pi 3B+/4B
 
-# Getting started
-- Clone the repository
-- In repository root, source poky build environemnt:
-	> source sources/poky/oe-init-build-env
-	
-- Add required layers:
-	>   bitbake-layers add-layer ../sources/meta-raspberrypi    
-	>   bitbake-layers add-layer ../sources/meta-openembedded/meta-oe   
-	>   bitbake-layers add-layer ../sources/meta-openembedded/meta-python   
-	>   bitbake-layers add-layer ../sources/meta-openembedded/meta-networking   
-	>   bitbake-layers add-layer ../sources/meta-openembedded/meta-multimedia   
-	>   bitbake-layers add-layer ../sources/meta-development    
-	
-- Define machine configurations in build/local.conf:
-	>   MACHINE ??= "raspberrypi3"  
-	>   ENABLE_UART = "1"   
-	>       
-	>   DISTRO_FEATURES += "systemd bluetooth wifi" 
-	>   DISTRO_FEATURES_remove = "pulseaudio sysvinit"  
-	>       
-	>   VIRTUAL-RUNTIME_init_manager = "systemd"    
-	>   VIRTUAL-RUNTIME_initscripts = ""    
-	>       
-	>   PREFERRED_VERSION_alsa-lib = "1.1.8"    
-	>   PREFERRED_VERSION_alsa-utils = "1.1.8"  
-	>   PREFERRED_VERSION_alsa-plugins = "1.1.8"    
-	>   PREFERRED_VERSION_sbc = "2.%"   
-	>       
-	>   RM_OLD_IMAGE = "1"  
-	>   IMAGE_FSTYPES = "rpi-sdimg" 
-	
-	Note: Set MACHINE to "raspberrypi4" for Raspberry Pi 4
-
-- Build image:
-	> bitbake rpi-dev--image
+# Feateres being Integrated/Developed
+- Qt Framework
+- Mender Framework
+- Pulseaudio
+- Custom Startup logo on boot
+- Custom App autostart on boot
+- Frame buffer control (fbset, fbi)
 
 # Helpful Yocto Commands:
 
