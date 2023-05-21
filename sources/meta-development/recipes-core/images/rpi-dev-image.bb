@@ -5,6 +5,21 @@ SPLASH = "psplash-raspberrypi"
 
 IMAGE_FEATURES += "ssh-server-dropbear splash"
 
+PKGS_QT5 = " \
+    qtbase-tools \
+    qtbase \
+    qtdeclarative \
+    qtimageformats \
+    qtmultimedia \
+    qtquickcontrols2 \
+    qtquickcontrols \
+    qtbase-plugins \
+    cinematicexperience \
+    liberation-fonts \
+"
+
+PACKAGECONFIG_FONTS_append_pn-qtbase = " fontconfig"
+
 PKGS_PULSEAUDIO = " \
     ofono \
     pulseaudio \
@@ -35,12 +50,12 @@ PKGS_BLUEALSA = " \
 "
 
 PKGS_MENDER = " \
-  mender \
-  mender-artifact \
-  mender-artifact-info \
-  mender-connect \
-  mender-configure \
-  mender-test-dependencies \
+    mender \
+    mender-artifact \
+    mender-artifact-info \
+    mender-connect \
+    mender-configure \
+    mender-test-dependencies \
 "
 
 ## Not available:
@@ -51,15 +66,16 @@ PKGS_MENDER = " \
 
 # Include modules in rootfs
 IMAGE_INSTALL += "\
- kernel-modules \
- linux-firmware-rpidistro-bcm43430 \
- systemd \
- make \
- cmake \
- usbutils \
- hostapd \
- wpa-supplicant \
- ${PKGS_BLUEALSA} \
+    kernel-modules \
+    linux-firmware-rpidistro-bcm43430 \
+    systemd \
+    make \
+    cmake \
+    usbutils \
+    hostapd \
+    wpa-supplicant \
+    ${PKGS_BLUEALSA} \
+    ${PKGS_QT5} \
 "
 
 #linux-firmware-rpidistro-bcm43430
