@@ -1,7 +1,9 @@
 build
 docs
-*__pycache__*
 sources/poky/.gitignore
+sources/poky/bitbake/lib
 sources/meta-raspberrypi/.gitignore
 sources/meta-raspberrypi/.github
 sources/meta-openembedded/.gitignore
+sources/meta-qt5/.github
+sources/meta-qt5/.gitignore
