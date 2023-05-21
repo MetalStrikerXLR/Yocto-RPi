@@ -28,18 +28,9 @@ PKGS_PULSEAUDIO = " \
 
 PKGS_BLUEALSA = " \
     ofono \
-    bluealsa \
+    bluez-alsa \
     alsa-utils \
     alsa-plugins \
-    packagegroup-tools-bluetooth \
-"
-
-PKGS_BLUEALSAORG = " \
-    ofono \
-    bluez-alsa \
-    alsa-utils-aplay \
-    alsa-utils-amixer \
-    alsa-utils-alsamixer \
     packagegroup-tools-bluetooth \
 "
 
@@ -63,10 +54,12 @@ IMAGE_INSTALL += "\
  kernel-modules \
  linux-firmware-rpidistro-bcm43430 \
  systemd \
+ make \
+ cmake \
  usbutils \
  hostapd \
  wpa-supplicant \
- ${PKGS_BLUEALSAORG} \
+ ${PKGS_BLUEALSA} \
 "
 
 #linux-firmware-rpidistro-bcm43430
