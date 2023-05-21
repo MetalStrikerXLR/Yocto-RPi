@@ -72,7 +72,7 @@ IMAGE_INSTALL += "\
     make \
     cmake \
     usbutils \
-    openssh-sftp-server 
+    openssh-sftp-server \
     rsync \
     hostapd \
     wpa-supplicant \
