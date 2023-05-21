@@ -1,10 +1,7 @@
 build
 docs
-sources/poky/.gitignore
-sources/meta-raspberrypi/.gitignore
-sources/meta-raspberrypi/.github
-sources/meta-openembedded/.gitignore
-sources/meta-qt5/.github
-sources/meta-qt5/.gitignore
-sources/meta-rpidev/.gitignore
-sources/meta-rpidev/.github
+sources/poky/.git*
+sources/meta-raspberrypi/.git*
+sources/meta-openembedded/.git*
+sources/meta-qt5/.git*
+sources/meta-rpidev/.git*
