@@ -72,6 +72,8 @@ IMAGE_INSTALL += "\
     make \
     cmake \
     usbutils \
+    openssh-sftp-server 
+    rsync \
     hostapd \
     wpa-supplicant \
     ${PKGS_BLUEALSA} \
