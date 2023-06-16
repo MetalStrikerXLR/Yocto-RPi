@@ -1,7 +1,8 @@
+.idea
 build
 docs
-*__pycache__*
-sources/poky/.gitignore
-sources/meta-raspberrypi/.gitignore
-sources/meta-raspberrypi/.github
-sources/meta-openembedded/.gitignore
+sources/poky/.git*
+sources/meta-raspberrypi/.git*
+sources/meta-openembedded/.git*
+sources/meta-qt5/.git*
+sources/meta-rpidev/.git*
