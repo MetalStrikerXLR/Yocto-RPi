@@ -2,17 +2,21 @@
 This is a personal project where I will be experimenting with Yocto for Raspberry Pi.
 
 - **Yocto Version:** 2.7 (warrior)
-- **Distribution:** poky
+- **Distribution:** rpi-dev (based on poky)
 - **Host System:** Ubuntu 20.04
 - **Target System:** Raspberry Pi 3B+/4B
 
-# Feateres being Integrated/Developed
-- Qt Framework
+# Feateres planned for Integration
+- EGLFS for Qt Framework
+- 'base64' command for Qt
 - Mender Framework
 - Pulseaudio
 - Custom Startup logo on boot
 - Custom App autostart on boot
 - Frame buffer control (fbset, fbi)
+
+# Feateres Developed
+- Qt Framework
 
 # Helpful Yocto Commands:
 
