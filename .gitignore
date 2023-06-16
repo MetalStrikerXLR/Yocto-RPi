@@ -6,3 +6,5 @@ sources/meta-raspberrypi/.git*
 sources/meta-openembedded/.git*
 sources/meta-qt5/.git*
 sources/meta-rpidev/.git*
+sources/meta-mender/.git*
+sources/meta-mender-community/.git*
