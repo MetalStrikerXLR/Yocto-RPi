@@ -72,6 +72,7 @@ IMAGE_INSTALL += "\
     make \
     cmake \
     usbutils \
+    coreutils \
     openssh-sftp-server \
     rsync \
     hostapd \
