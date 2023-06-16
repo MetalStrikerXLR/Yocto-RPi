@@ -10,13 +10,6 @@ do_compile() {
 	mkimage -C none -A arm -T script -d "${WORKDIR}/boot.cmd" boot.scr
 }
 
-do_compile:cubox-i() {
-	sed -e 's/@@KERNEL_IMAGETYPE@@/${KERNEL_IMAGETYPE}/' \
-	    -e 's/@@KERNEL_DEVICETREE@@/${KERNEL_DEVICETREE}/' \
-	    "${WORKDIR}/boot.cmd" > "${WORKDIR}/boot.cmd.out"
-	mkimage -C none -A arm -T script -d "${WORKDIR}/boot.cmd.out" boot.scr
-}
-
 inherit deploy
 
 do_deploy() {
@@ -27,4 +20,4 @@ do_deploy() {
 addtask do_deploy after do_compile before do_build
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-COMPATIBLE_MACHINE = "(imx7s-warp|imx7d-pico|imx7dsabresd|cubox-i)"
+COMPATIBLE_MACHINE = "(imx7s-warp|imx7d-pico|imx7dsabresd)"

@@ -1,3 +1,3 @@
-FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRC_URI += "file://0001-boundary-bootscripts-bootscript-yocto-add-Mender-sup.patch"
+SRC_URI += "file://0001-bootscript-add-Mender-support.patch"

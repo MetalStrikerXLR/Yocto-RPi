@@ -12,30 +12,18 @@ fi
 script_dir=$(dirname "$this_script")
 script_dir=$(readlink -f "$script_dir")
 
-if [ -d ${script_dir}/sources/meta-mender-community ]; then
-    mender_community_dir=${script_dir}/sources/meta-mender-community
-    layers_dir=sources
-elif [ -d ${script_dir}/layers/meta-mender-community ]; then
-    mender_community_dir=${script_dir}/layers/meta-mender-community
-    layers_dir=layers
-else
-    echo "Sorry, can't seem to find meta-mender-community (tried sources, layers)"
-    return 1
-fi
-
+mender_community_dir=${script_dir}/sources/meta-mender-community
 build_dir=${script_dir}/build
 
 target=""
 
 targets=(
     "atmel"
-    "amlogic"
     "beaglebone"
     "clearfog"
     "coral"
     "intel"
     "nxp"
-    "octavo-osd32mp"
     "odroid"
     "qemu"
     "raspberrypi"
@@ -43,7 +31,6 @@ targets=(
     "rockchip"
     "sunxi"
     "tegra"
-    "ti"
     "up"
     "variscite")
 
@@ -67,13 +54,9 @@ fi
 
 target_templates=${mender_community_dir}/meta-mender-${target}/templates
 
+. ${script_dir}/sources/poky/oe-init-build-env ${build_dir}
 
-if [ -f ${script_dir}/${layers_dir}/poky/oe-init-build-env ]; then
-    . ${script_dir}/${layers_dir}/poky/oe-init-build-env ${build_dir}
-elif [ -f ${script_dir}/${layers_dir}/openembedded-core/oe-init-build-env ]; then
-    . ${script_dir}/${layers_dir}/openembedded-core/oe-init-build-env ${build_dir}
-else
-    echo "Sorry, can't find oe-init-build-env."
+if [ -f ${build_dir}/conf/mender_append_complete ]; then
     return 1
 fi
 

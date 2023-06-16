@@ -2,7 +2,7 @@
 
 Supported boards:
 
- - [Rock Pi E](https://rockpi.eu/RockpiE)
+ - Tinker Board
 
 ## Build
 
@@ -13,7 +13,7 @@ Download the source:
     $ repo init \
            -u https://github.com/mendersoftware/meta-mender-community \
            -m meta-mender-rockchip/scripts/manifest-rockchip.xml \
-           -b kirkstone
+           -b thud
     $ repo sync
 
 Setup environment

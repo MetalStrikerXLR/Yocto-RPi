@@ -12,5 +12,4 @@ BBLAYERS ?= " \
   ${TOPDIR}/../sources/meta-mender/meta-mender-core \
   ${TOPDIR}/../sources/meta-mender/meta-mender-demo \
   ${TOPDIR}/../sources/meta-mender-community/meta-mender-beaglebone \
-  ${TOPDIR}/../sources/meta-openembedded/meta-oe \
 "

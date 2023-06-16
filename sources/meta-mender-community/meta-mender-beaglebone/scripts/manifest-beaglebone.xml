@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
-  <remote fetch="https://github.com/openembedded"  name="oe"/>
+  <default sync-j="4" revision="warrior"/>
 
-  <project name="poky" remote="yocto" revision="kirkstone" path="sources/poky"/>
-  <project name="meta-openembedded" remote="oe" revision="kirkstone" path="sources/meta-openembedded"/>
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+
+  <project name="poky" remote="yocto" revision="warrior" path="sources/poky"/>
 
   <include name="scripts/mender.xml"/>
 

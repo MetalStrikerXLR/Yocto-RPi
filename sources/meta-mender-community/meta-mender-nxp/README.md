@@ -7,11 +7,7 @@ The supported and tested boards are:
  - [WaRP7](https://hub.mender.io/t/nxp-warp7/135)
  - [Pico-Pi i.MX7D](https://hub.mender.io/t/technexion-pico-pi-imx7/136)
  - [Nitrogen8M](https://hub.mender.io/t/boundary-devices-nitrogen8m/409)
- - [Nitrogen8MM](https://hub.mender.io/t/boundary-devices-nitrogen8m/409)
- - [Nitrogen8MN](https://hub.mender.io/t/boundary-devices-nitrogen8m/409)
- - [Nitrogen8MP](https://hub.mender.io/t/boundary-devices-nitrogen8m/409)
  - [i.MX7D SABRE](https://hub.mender.io/t/nxp-i-mx7d-sabre/1279)
- - [HummingBoard i.MX6 SBC](https://hub.mender.io/t/solidrun-hummingboard-and-cubox-i/5671)
 
 
 Visit the individual board links above for more information on status of the
@@ -24,20 +20,20 @@ This layer depends on:
 
 ```
 URI: https://github.com/Freescale/meta-freescale-3rdparty
-branch: kirkstone
+branch: warrior
 revision: HEAD
 ```
 
 ```
 URI: https://github.com/Freescale/meta-freescale-distro
-branch: kirkstone
+branch: warrior
 revision: HEAD
 ```
 
 ```
 URI: https://github.com/boundarydevices/meta-boundary
-branch: kirkstone
-revision: HEAD
+branch: warrior
+revision: 0beba0ebbda86342e77659ccb9efeef0094b434c
 ```
 
 ## Quick start
@@ -50,7 +46,7 @@ that have Mender integrated.
 mkdir mender-nxp && cd mender-nxp
 repo init -u https://github.com/mendersoftware/meta-mender-community \
           -m meta-mender-nxp/scripts/manifest-nxp.xml \
-          -b kirkstone
+          -b warrior
 repo sync
 source setup-environment nxp
 MACHINE=imx7s-warp bitbake core-image-base

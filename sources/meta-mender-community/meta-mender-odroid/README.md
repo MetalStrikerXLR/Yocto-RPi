@@ -16,14 +16,14 @@ This layer depends on:
 
 ```
 URI: https://github.com/akuster/meta-odroid
-branch: zeus
+branch: warrior
 revision: HEAD
 ```
 
 ```
 URI: https://github.com/mendersoftware/meta-mender.git
 layers: meta-mender-core
-branch: zeus
+branch: warrior
 revision: HEAD
 ```
 
@@ -37,7 +37,7 @@ that have Mender integrated.
 mkdir mender-odroid && cd mender-odroid
 repo init -u https://github.com/mendersoftware/meta-mender-community \
            -m meta-mender-odroid/scripts/manifest-odroid.xml \
-           -b zeus
+           -b warrior
 repo sync
 source setup-environment odroid
 MACHINE=odroid-c2 bitbake core-image-base

@@ -2,8 +2,8 @@ HOMEPAGE = "https://mender.io"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=86d3f3a95c324c9479bd8986968f4327"
 
-SRC_URI = "git://github.com/mendersoftware/mender-update-modules.git;branch=master;protocol=https"
+SRC_URI = "git://github.com/mendersoftware/mender-update-modules.git"
 
-SRCREV = "a9f676eefe2e482ba3f7a6ad2d8c15ab3327a54f"
+SRCREV = "c54c5c6d69aaf3e261d316eb1b1f9d6ae45f17a2"
 
 S = "${WORKDIR}/git"
