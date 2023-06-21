@@ -2,6 +2,7 @@
 build
 docs
 *pycache*
+*pyshtables*
 sources/poky/.git*
 sources/meta-raspberrypi/.git*
 sources/meta-openembedded/.git*

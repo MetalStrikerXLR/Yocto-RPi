@@ -8,8 +8,8 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=8449a4f133a93f6254b496d4fb476e83"
 
 DEPENDS = "alsa-lib bluez5 dbus glib-2.0 systemd sbc ofono"
 
-SRCREV = "master"
-#SRCREV = "1219b1deb67147db4930217a5ff15647cfa1bf56"
+#SRCREV = "master"
+SRCREV = "e3fce503127c4e152780684b6ddd3a76fbc77197"
 SRC_URI = "git://github.com/Arkq/bluez-alsa.git;branch=master;protocol=https \
            file://bluez-alsa.service"
 
