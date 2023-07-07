@@ -51,18 +51,9 @@ PKGS_BLUEALSA = " \
 
 PKGS_MENDER = " \
     mender \
-    mender-artifact \
-    mender-artifact-info \
     mender-connect \
     mender-configure \
-    mender-test-dependencies \
 "
-
-## Not available:
-# mender-client
-# mender-client-modify
-# mender-image
-# mender-systemd
 
 # Include modules in rootfs
 IMAGE_INSTALL += "\
@@ -78,6 +69,7 @@ IMAGE_INSTALL += "\
     wpa-supplicant \
     ${PKGS_BLUEALSA} \
     ${PKGS_QT5} \
+    ${PKGS_MENDER} \
 "
 
 #linux-firmware-rpidistro-bcm43430
